@@ -1,0 +1,100 @@
+.contact-expert,
+.navigate-your-ideal {
+  position: relative;
+  line-height: 28px;
+  font-weight: 500;
+  display: inline-block;
+}
+.navigate-your-ideal {
+  max-width: 100%;
+}
+.contact-expert {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: inherit;
+  min-width: 123px;
+}
+.button {
+  flex-direction: column;
+  align-items: center;
+}
+.button,
+.buttonmargin,
+.heading-1 {
+  display: flex;
+  justify-content: flex-start;
+}
+.buttonmargin {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 var(--padding-5xs);
+  text-align: center;
+  font-size: var(--homeaccrediancom-roboto-bold-17-size);
+  color: var(--homeaccrediancom-royal-blue);
+}
+.heading-1 {
+  flex-direction: row;
+  align-items: center;
+  gap: 11px;
+  max-width: 100%;
+}
+.background,
+.overlay {
+  align-self: stretch;
+  display: flex;
+  max-width: 100%;
+}
+.overlay {
+  background-color: var(--homeaccrediancom-royal-blue-15);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-base) var(--padding-xl);
+  box-sizing: border-box;
+}
+.background {
+  background-color: var(--homeaccrediancom-nero);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.refer-earn-page-child,
+.refer-earn-page-item {
+  width: 2px;
+  height: 553px;
+  position: absolute;
+  margin: 0 !important;
+  right: 731px;
+  bottom: 1951px;
+  border-right: 2px solid var(--color-gray-100);
+  box-sizing: border-box;
+  z-index: 2;
+}
+.refer-earn-page-item {
+  height: 554px;
+  right: 529px;
+  bottom: 1950px;
+}
+.refer-earn-page {
+  width: 100%;
+  position: relative;
+  background-color: var(--homeaccrediancom-nero);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0 0 0.1px;
+  box-sizing: border-box;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  font-size: var(--font-size-base-9);
+  color: var(--homeaccrediancom-mine-shaft1);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 900px) {
+  .heading-1 {
+    flex-wrap: wrap;
+  }
+}
