@@ -1,7 +1,18 @@
 import PropTypes from "prop-types";
 import "./FrameComponent2.css";
+import React, { useState } from 'react';
+import ReferModal from './ReferModal';
 
 const FrameComponent2 = ({ className = "" }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <section className={`rectangle-container ${className}`}>
       <div className="rectangle-div" data-scroll-to="rectangle" />
@@ -46,9 +57,10 @@ const FrameComponent2 = ({ className = "" }) => {
         </div>
       </div>
       <div className="button-wrapper">
-        <button className="button5">
+        <button onClick={openModal} className="button5">
           <div className="refer-now1">Refer Now</div>
         </button>
+        <ReferModal isOpen={isModalOpen} onRequestClose={closeModal} />
       </div>
     </section>
   );

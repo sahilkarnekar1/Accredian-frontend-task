@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 import {
   Routes,
   Route,
@@ -44,9 +46,12 @@ function App() {
   }, [pathname]);
 
   return (
+    <>
+    <ToastContainer />
     <Routes>
       <Route path="/" element={<ReferEarnPage />} />
     </Routes>
+    </>
   );
 }
 export default App;

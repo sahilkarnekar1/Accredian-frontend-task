@@ -1,8 +1,20 @@
 import { useCallback } from "react";
 import PropTypes from "prop-types";
 import "./FrameComponent3.css";
+import React, { useState } from 'react';
+import ReferModal from './ReferModal';
 
 const FrameComponent3 = ({ className = "" }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   const onBenefitsTextClick = useCallback(() => {
     const anchor = document.querySelector("[data-scroll-to='rectangle']");
     if (anchor) {
@@ -75,9 +87,10 @@ const FrameComponent3 = ({ className = "" }) => {
                   </div>
                 </div>
                 <div className="refer-now-button-container">
-                  <button className="button4">
+                  <button onClick={openModal} className="button4">
                     <div className="refer-now">Refer Now</div>
                   </button>
+                  <ReferModal isOpen={isModalOpen} onRequestClose={closeModal} />
                 </div>
               </div>
               <img

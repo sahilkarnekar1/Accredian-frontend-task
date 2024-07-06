@@ -1,7 +1,18 @@
 import PropTypes from "prop-types";
 import "./FrameComponent1.css";
+import React, { useState } from 'react';
+import ReferModal from './ReferModal';
 
 const FrameComponent1 = ({ className = "" }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <section className={`benefits-container-wrapper ${className}`}>
       <div className="benefits-container">
@@ -298,9 +309,10 @@ const FrameComponent1 = ({ className = "" }) => {
           </div>
         </div>
         <div className="refer-now-button-container1">
-          <button className="button6">
+          <button onClick={openModal} className="button6">
             <div className="refer-now2">Refer Now</div>
           </button>
+          <ReferModal isOpen={isModalOpen} onRequestClose={closeModal} />
         </div>
       </div>
     </section>
