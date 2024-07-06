@@ -36,6 +36,7 @@ const ReferModal = ({ isOpen, onRequestClose }) => {
     phone: '',
     email: '',
     referCode: '',
+    referLink: '',
   });
   const [referralLink, setReferralLink] = useState('');
 
@@ -52,7 +53,10 @@ const ReferModal = ({ isOpen, onRequestClose }) => {
 const handleSubmit = async (e) => {
   e.preventDefault();
   const link = `https://yourwebsite.com/referral?code=${formData.referCode}`;
+  formData.referLink = link;
   setReferralLink(link);
+  
+  console.log(formData);
 
   try {
     const response = await fetch('https://refer-and-earn-backend.vercel.app/api/refer', {
